@@ -49,7 +49,14 @@ newGameButton.onclick = function() {
 //start button
 startButton.onclick = function(){
    if (on || win) {
-       //play();
+       play();
    }
       console.log("Clicked!")
 }
+
+function play() {
+    underScores = [];
+    guessesLeft = 6;
+    pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log(pickedWord)
+};

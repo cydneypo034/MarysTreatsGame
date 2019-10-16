@@ -37,16 +37,25 @@ body {
 }
 
 h2 {
-    color: white;
     font-size: 50px;
     text-align: right;
+    background-color:rgb(221, 24, 24);
+    position: absolute;
+    height: 110px;
+    width: 500px;
+    left: 600px;
+    top: 325px;
 }
 
 .clickme {
-    color: white;
     font-size: 30px;
-    text-align: left;
-
+    text-align: center;
+    background-color:rgb(221, 24, 24);
+    height: 50px;
+    width: 500px;
+    position: absolute;
+    left: 1120px;
+    top: 365px;
 }
 
 .guessAndScores{
@@ -55,9 +64,13 @@ h2 {
     height: 160px;
     position: absolute;
     left: 600px;
+    top: 530px;
 }
 
 #remGuesses {
+    font-family: scarlet,sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -71,7 +84,29 @@ h2 {
 
 .start-button{
     position: absolute;
+    left: 950px;
+    top: 700px;
+    background-color: rgb(221, 24, 24);
+    height: 70px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+}
+
+.new-button{
+    position: absolute;
     left: 600px;
+    top: 700px;
+    background-color: rgb(221, 24, 24);
+    height: 70px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+}
+
+.hint-button{
+    position: absolute;
+    left: 780px;
     top: 700px;
     background-color: rgb(221, 24, 24);
     height: 70px;

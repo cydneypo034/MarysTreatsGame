@@ -14,14 +14,14 @@ let correctAnswer = []; //users correct answer
 let wrongLetter = []; //every time letter is guessed wrong
 
 let on = false; //startbutton is turned on
-let hints = ["These little treats are the STARS of every show, they come in bright colors, in wrappers and are packaged in a row.",
-"Come Taste The Rainbow with these little candies, each marked with an 'S', they seem so dandy.",
-"Red and white candies that leave a fresh taste, they're best when sucked on and come as a flavor for toothpaste.", 
-"Sweet, velvety and a baking delight, it's a brown treat that comes in dark and light", 
-"It's a hard sweet that comes on a stick, licks to eat it will do the trick",
-"It's brightly colored and filled with jelly, a small little bean that's good in your belly",
-"They're small, fruity and bouncy to touch, a gum that's fun to chew and we love very much",
-"Blow out the candles on this popular sweet treat, they come individually frosted and are sweet to eat.",
+let hints = ['These little treats are the STARS of every show, they come in bright colors, in wrappers and are packaged in a row.',
+'Come Taste The Rainbow with these little candies, each marked with an S, they seem so dandy.',
+'Red and white candies that leave a fresh taste, they are best when sucked on and come as a flavor for toothpaste.', 
+'Sweet, velvety and a baking delight, a brown treat that comes in dark and light.', 
+'It is a hard sweet that comes on a stick, licks to eat it will do the trick.',
+'It is brightly colored and filled with jelly, a small little bean that is good in your belly.',
+'They are small, fruity and bouncy to touch, a gum that is fun to chew and we love very much.',
+'Blow out the candles on this popular sweet treat, they come individually frosted and are sweet to eat.',
  ];
 
 const buttons = document.querySelector('#buttonholder');
@@ -30,6 +30,7 @@ const hintButton = document.querySelector('#hint');
 const newGameButton = document.querySelector('#newGame');
 const score = document.querySelector('#score');
 const remainingGuesses = document.querySelector('#remGuesses');
+
 
 
 //on button
@@ -71,5 +72,46 @@ function underScoresDisplay() {
     document.getElementById('theWord').innerHTML = underScores.join(" ");
     console.log(underScores);
 
-    //resets game
+    //reset
+    wrongLetter = [];
+    guessesLeft = 6;
+    correctAnswer = [];
+
+    //prints guesses left game
+    document.getElementById('remGuesses').innerHTML = 'Number of Guesses Left: ' + " " + guessesLeft;
+    console.log(guessesLeft)
+
+    for(i = 0; i < underScores; i++){
+        correctAnswer.push(" ");
+        console.log(correctAnswer);
+    }
+
+    theseHints();
+}
+
+function theseHints () {
+    if (pickedWord === 'starbursts'){
+        document.getElementById("myHints2").innerHTML = 'These little treats are the STARS of every show, they come in bright colors, in wrappers and are packaged in a row.'
+    }
+    if (pickedWord === 'skittles'){
+        document.getElementById("myHints3").innerHTML = 'Come Taste The Rainbow with these little candies, each marked with an S, they seem so dandy.'
+    }
+    if (pickedWord === 'peppermints'){
+        document.getElementById("myHints4").innerHTML = 'Red and white candies that leave a fresh taste, they are best when sucked on and come as a flavor for toothpaste.'
+    }
+    if (pickedWord === 'chocolate'){
+        document.getElementById("myHints5").innerHTML = 'Sweet, velvety and a baking delight, a brown treat that comes in dark and light.'
+    }
+    if (pickedWord === 'lollipops'){
+        document.getElementById("myHints6").innerHTML = 'It is a hard sweet that comes on a stick, licks to eat it will do the trick.'
+    }
+    if (pickedWord === 'jellybeans'){
+        document.getElementById("myHints7").innerHTML = 'It is brightly colored and filled with jelly, a small little bean that is good in your belly.'
+    }
+    if (pickedWord === 'gummies'){
+        document.getElementById("myHints8").innerHTML = 'They are small, fruity and bouncy to touch, a gum that is fun to chew and we love very much.'
+    }
+    if (pickedWord === 'cupcake'){
+        document.getElementById("myHints9").innerHTML = 'Blow out the candles on this popular sweet treat, they come individually frosted and are sweet to eat.'
+    }
 }

@@ -30,7 +30,8 @@ const hintButton = document.querySelector('#hint');
 const newGameButton = document.querySelector('#newGame');
 const score = document.querySelector('#score');
 const remainingGuesses = document.querySelector('#remGuesses');
-
+const buttonHolder = document.getElementById("buttonsHolder");
+const buttonName = document.getElementById( "name");
 
 
 //on button
@@ -46,7 +47,8 @@ newGameButton.onclick = function() {
 
 }
 
-
+setLetter();
+    keys();
 //start button
 startButton.onclick = function(){
    if (on || win) {
@@ -61,6 +63,7 @@ function play() {
     pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log(pickedWord)
     underScoresDisplay();
+    
 };
 
 function underScoresDisplay() {
@@ -115,3 +118,27 @@ function theseHints () {
         document.getElementById("myHints9").innerHTML = 'Blow out the candles on this popular sweet treat, they come individually frosted and are sweet to eat.'
     }
 }
+
+function keys() {
+    holder = buttonHolder
+    for(var i = 65; i <= 90; i++ ) {
+        if ( i == 65 || i == 75 || i == 84 ) {
+            p = document.createElement("p");
+        }
+        letter = String.fromCharCode( i );
+        button = document.createElement("button");
+        button.innerHTML = letter;
+        button.setAttribute("data-letter", letter);
+        button.onclick = function(e) { setLetter( this.getAttribute("data-letter"));};
+        p.appendChild(button);
+        if(i == 74 || i == 83 || i ==90) {
+            holder.appendChild( p );
+        }
+
+    }
+    
+}
+
+function setLetter(letter) {
+        buttonName.innerHTML = buttonName.innerHTML + letter;
+    }

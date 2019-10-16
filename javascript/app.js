@@ -59,4 +59,17 @@ function play() {
     guessesLeft = 6;
     pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log(pickedWord)
+    underScoresDisplay();
 };
+
+function underScoresDisplay() {
+    //creates the underscores
+    for(var i = 0; i < pickedWord.length; i++) {
+        underScores.push('_');
+    }
+    //prints underscores to screen
+    document.getElementById('theWord').innerHTML = underScores.join(" ");
+    console.log(underScores);
+
+    //resets game
+}

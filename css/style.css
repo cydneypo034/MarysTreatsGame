@@ -22,3 +22,60 @@ body {
     top: 5px;
     right: 995px;
 }
+
+.gameInstructions {
+    font-family: scarlet,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+    position: relative;
+    font-size: 24px;
+    bottom: 90px;
+    color: white;
+    background-color: rgb(221, 24, 24);
+    opacity: 0.9;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    text-align: right;
+}
+
+.clickme {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+
+}
+
+.guessAndScores{
+    background-color: rgb(221, 24, 24);
+    width: 500px;
+    height: 160px;
+    position: absolute;
+    left: 600px;
+}
+
+#remGuesses {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#score {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.start-button{
+    position: absolute;
+    left: 600px;
+    top: 700px;
+    background-color: rgb(221, 24, 24);
+    height: 70px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+}

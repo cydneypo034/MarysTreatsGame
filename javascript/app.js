@@ -31,16 +31,6 @@ const newGameButton = document.querySelector('#newGame');
 const score = document.querySelector('#score');
 const remainingGuesses = document.querySelector('#remGuesses');
 
-//start button
-startButton.onclick = function(){
-   if (startButton.onclick ==true) {
-       on = true;
-      }
-      else {
-          on = false;
-      }
-      console.log("Clicked!")
-}
 
 //on button
 newGameButton.onclick = function() {
@@ -53,4 +43,13 @@ newGameButton.onclick = function() {
     }
     console.log("Clicked on!")
 
+}
+
+
+//start button
+startButton.onclick = function(){
+   if (on || win) {
+       //play();
+   }
+      console.log("Clicked!")
 }

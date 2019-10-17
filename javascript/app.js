@@ -139,7 +139,12 @@ const theseButtons = function () {
         letters.appendChild(list);
     }
 }
-
+function check () {
+    list.onclick = function () {
+        userGuesses = (this.innerHTML)
+        this.setAttribute
+    }
+}
 // function keys() {
 //     holder = buttonHolder
 //     for(var i = 65; i <= 90; i++ ) {

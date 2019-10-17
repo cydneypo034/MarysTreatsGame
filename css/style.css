@@ -56,17 +56,21 @@ h2 {
     position: absolute;
     left: 1120px;
     top: 365px;
+    border: 8px dotted white;
+
 }
 
 .buttons {
     position: absolute;
     left: 1200px;
-    top: 595px;
+    top: 565px;
     font-size: 20px;
     text-align: center;
     font-family: scarlet,sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: rgb(221, 24, 24);
+    border: 8px dotted white;
 }
 
 
@@ -77,6 +81,8 @@ h2 {
     position: absolute;
     left: 600px;
     top: 530px;
+    border: 8px dotted white;
+
 }
 
 #remGuesses {
@@ -86,6 +92,7 @@ h2 {
     color: white;
     font-size: 30px;
     text-align: center;
+    
 }
 
 #score {
@@ -94,10 +101,11 @@ h2 {
     text-align: center;
 }
 
+
 .start-button{
     position: absolute;
-    left: 950px;
-    top: 700px;
+    left: 860px;
+    top: 730px;
     background-color: rgb(221, 24, 24);
     height: 70px;
     width: 150px;
@@ -107,13 +115,17 @@ h2 {
 
 .new-button{
     position: absolute;
-    left: 600px;
-    top: 700px;
+    left: 700px;
+    top: 730px;
     background-color: rgb(221, 24, 24);
     height: 70px;
     width: 150px;
     color: white;
     font-size: 20px;
+}
+
+#theWord {
+    border: 8px dotted white;
 }
 
 .hint-button{
@@ -136,6 +148,8 @@ h2 {
     list-style: none;
     border: solid 1px white;
     float: left;
+    box-shadow: 9px; 
+    cursor: pointer;
 }
 
 #alphabet li:hover{

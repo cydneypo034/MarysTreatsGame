@@ -24,6 +24,8 @@ let hints = ['These little treats are the STARS of every show, they come in brig
 'Blow out the candles on this popular sweet treat, they come individually frosted and are sweet to eat.',
  ];
 
+const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
+'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 const buttons = document.querySelector('#buttonholder');
 const startButton = document.querySelector('#start');
 const hintButton = document.querySelector('#hint');
@@ -47,8 +49,7 @@ newGameButton.onclick = function() {
 
 }
 
-setLetter();
-    keys();
+
 //start button
 startButton.onclick = function(){
    if (on || win) {
@@ -63,8 +64,13 @@ function play() {
     pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log(pickedWord)
     underScoresDisplay();
-    
+    theseButtons();
+   
 };
+
+
+
+
 
 function underScoresDisplay() {
     //creates the underscores
@@ -119,26 +125,49 @@ function theseHints () {
     }
 }
 
-function keys() {
-    holder = buttonHolder
-    for(var i = 65; i <= 90; i++ ) {
-        if ( i == 65 || i == 75 || i == 84 ) {
-            p = document.createElement("p");
-        }
-        letter = String.fromCharCode( i );
-        button = document.createElement("button");
-        button.innerHTML = letter;
-        button.setAttribute("data-letter", letter);
-        button.onclick = function(e) { setLetter( this.getAttribute("data-letter"));};
-        p.appendChild(button);
-        if(i == 74 || i == 83 || i ==90) {
-            holder.appendChild( p );
-        }
+const theseButtons = function () {
+    const myButtons = document.getElementById("buttonsHolder");
+    const letters = document.createElement('ul')
 
+    for (var i=0; i < alphabet.length; i++){
+        letters.id = 'alphabet';
+        list = document.createElement('li');
+        list.id = 'letter';
+        list.innerHTML = alphabet[i];
+        // check();
+        myButtons.appendChild(letters);
+        letters.appendChild(list);
     }
-    
 }
 
-function setLetter(letter) {
-        buttonName.innerHTML = buttonName.innerHTML + letter;
-    }
+// function keys() {
+//     holder = buttonHolder
+//     for(var i = 65; i <= 90; i++ ) {
+//         if ( i == 65 || i == 75 || i == 84 ) {
+//             p = document.createElement("p");
+//         }
+//         letter = String.fromCharCode( i );
+//         button = document.createElement("button");
+//         button.innerHTML = letter;
+//         button.setAttribute("data-letter", letter);
+//         button.onclick = function(e) { setLetter( this.getAttribute("data-letter"));};
+//         p.appendChild(button);
+//         if(i == 74 || i == 83 || i ==90) {
+//             holder.appendChild( p );
+//         }
+
+//     }
+    
+// }
+
+// function setLetter(letter) {
+//         buttonName.innerHTML;
+//         console.log(letter)
+
+        
+//     }
+
+
+
+
+

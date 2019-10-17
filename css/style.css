@@ -51,6 +51,7 @@ h2 {
     font-size: 30px;
     text-align: center;
     background-color:rgb(221, 24, 24);
+    color: white;
     height: 130px;
     width: 500px;
     position: absolute;
@@ -62,8 +63,9 @@ h2 {
 
 .buttons {
     position: absolute;
-    left: 1200px;
-    top: 565px;
+    left: 1150px;
+    top: 535px;
+    right: 30px;
     font-size: 20px;
     text-align: center;
     font-family: scarlet,sans-serif;
@@ -126,6 +128,7 @@ h2 {
 
 #theWord {
     border: 8px dotted white;
+    color: white;
 }
 
 .hint-button{
@@ -142,7 +145,7 @@ h2 {
 #alphabet li{
     background-color: white;
     margin: 0 10px 10px 0;
-    width: 35px;
+    width: 30px;
     height: 30px;
     padding-top: 10px;
     list-style: none;
